@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/neue-plak-webfont/neue-plak.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="h-[112px]">
+      <nav
+        class="fixed top-0 flex items-center w-full justify-between p-8 bg-white z-30"
+      >
+        <a href="index.html">
+          <img
+            src="assets/images/logos/logo.png"
+            class="md:flex shrink-0 h-10 hidden"
+            alt="logo"
+          />
+          <img
+            src="assets/images/logos/logo2.png"
+            class="flex md:hidden shrink-0 h-14"
+            alt="logo"
+          />
+        </a>
+        <ul class="hidden md:flex items-center justify-center gap-8">
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="view-booking.html">View My Booking</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="workshop.html">Workshop</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="contact.html">Contact</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="">Testimony</a>
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="flex items-center rounded-full h-12 px-6 gap-[10px] w-fit shrink-0 bg-aktiv-green"
+        >
+          <span class="font-semibold text-white">Contact CS</span>
+          <img
+            src="assets/images/icons/whatsapp.svg"
+            class="w-6 h-6 text-white"
+            alt="icon"
+          />
+        </a>
+      </nav>
+      <div
+        class="fixed bottom-0 left-0 w-full flex md:hidden bg-white justify-between px-4 py-4 border-t border-gray-200 z-30"
+      >
+        <!-- Home Icon -->
+        <a href="index.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <rect x="3" y="4" rx="2" />
+            <path
+              d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Home</span>
+        </a>
+
+        <!-- Booking Icon -->
+        <a href="view-booking.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M5 2H19C19.5523 2 20 2.44772 20 3V22.1433C20 22.4194 19.7761 22.6434 19.5 22.6434C19.4061 22.6434 19.314 22.6168 19.2344 22.5669L12 18.0313L4.76559 22.5669C4.53163 22.7136 4.22306 22.6429 4.07637 22.4089C4.02647 22.3293 4 22.2373 4 22.1433V3C4 2.44772 4.44772 2 5 2ZM18 4H6V19.4324L12 15.6707L18 19.4324V4ZM8 9H16V11H8V9Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">My Booking</span>
+        </a>
+
+        <!-- Workshop Icon -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM11 13V17H6V13H11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Workshop</span>
+        </a>
+
+        <!-- Contact CS Icon -->
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M4 2C3.44772 2 3 2.44772 3 3V5H5V4H19V20H5V19H3V21C3 21.5523 3.44772 22 4 22H20C20.5523 22 21 21.5523 21 21V3C21 2.44772 20.5523 2 20 2H4ZM9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16H9ZM12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10C14 11.1046 13.1046 12 12 12ZM6 9V7H2V9H6ZM6 11V13H2V11H6ZM6 17V15H2V17H6Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Contact</span>
+        </a>
+      </div>
+    </div>
+    </div>
+   <section class="mb-32">
+  <div id="map" class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8443465862583!2d106.84659737475084!3d-6.25281829373564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3a5be656509%3A0xb407f61e419da940!2sUniversitas%20Trilogi!5e1!3m2!1sid!2sid!4v1736354321695!5m2!1sid!2sid"
+      width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <div class="container px-6 md:px-12">
+    <div
+      class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
+      <div class="flex flex-wrap">
+        <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
+          <form>
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <input type="text"
+                  class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                  id="exampleInput90" />
+              <label
+                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                  for="exampleInput90">Name
+                </label>
+            </div>
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <input type="email"
+                  class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                  id="exampleInput91" />
+              <label
+                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                  for="exampleInput91">Email address
+                </label>
+            </div>
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                  class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                  id="exampleFormControlTextarea1" rows="3"></textarea>
+              <label for="exampleFormControlTextarea1"
+                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">Message</label>
+            </div>
+            <button type="button"
+                class="mb-6 w-full rounded bg-aktiv-green text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal   lg:mb-0">
+                Send
+              </button>
+          </form>
+        </div>
+        <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+          <div class="flex flex-wrap">
+            <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+              <div class="flex items-start">
+                <div class="shrink-0">
+                  <div class="inline-block rounded-md bg-aktiv-blue p-4 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                      stroke="currentColor" class="h-6 w-6 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-6 grow">
+                  <p class="mb-2 font-bold ">
+                    Technical support
+                  </p>
+                  <p class="text-sm text-neutral-500">
+                    example@gmail.com
+                  </p>
+                  <p class="text-sm text-neutral-500">
+                    +6287613453
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+              <div class="flex items-start">
+                <div class="srink-0">
+                  <div class="inline-block rounded-md bg-aktiv-blue p-4 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                      stroke="currentColor" class="w-7 h-7 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-6 grow">
+                  <p class="mb-2 font-bold ">
+                    Address
+                  </p>
+                  <p class="text-sm text-neutral-500">
+                   Universitas Trilogi
+Jl. TMP. Kalibata No.1, RT.4/RW.04, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
+              <div class="align-start flex">
+                <div class="shrink-0">
+                  <div class="inline-block rounded-md bg-aktiv-blue p-4 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-6 grow">
+                  <p class="mb-2 font-bold ">Mobile</p>
+                  <p class="text-neutral-500"> +628742357325
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <footer class="w-full p-[52px] bg-white hidden lg:block">
+        <div class="flex flex-col w-full max-w-[1176px] mx-auto gap-8">
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/images/logos/logo.png" class="h-10" alt="logo">
+                <p class="font-medium text-aktiv-grey">Ipsum is a company engaged in offline education.</p>
+            </div>
+            <hr class="border-[#E6E7EB]">
+            <div class="grid lg:grid-cols-3 items-center">
+                <p class="font-medium text-aktiv-grey hidden lg:flex">© 2025 Workflow Copyright</p>
+                <ul class="flex flex-col lg:flex-row items-center justify-center gap-6">
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">Workshop</a>
+                    </li>
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">Community</a>
+                    </li>
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">Testimony</a>
+                    </li>
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">About Us</a>
+                    </li>
+                </ul>
+                <ul class="flex flex-col items-center justify-end gap-6 mt-5">
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">Instagram</a>
+                    </li>
+                    <li
+                        class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
+                        <a href="#">Twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script type="module">
+  import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+  const keenSliderActive = document.getElementById('keen-slider-active')
+  const keenSliderCount = document.getElementById('keen-slider-count')
+
+  const keenSlider = new KeenSlider(
+    '#keen-slider',
+    {
+      loop: true,
+      defaultAnimation: {
+        duration: 750,
+      },
+      slides: {
+        origin: 'center',
+        perView: 1,
+        spacing: 16,
+      },
+      breakpoints: {
+        '(min-width: 640px)': {
+          slides: {
+            origin: 'center',
+            perView: 1.5,
+            spacing: 16,
+          },
+        },
+        '(min-width: 768px)': {
+          slides: {
+            origin: 'center',
+            perView: 1.75,
+            spacing: 16,
+          },
+        },
+        '(min-width: 1024px)': {
+          slides: {
+            origin: 'center',
+            perView: 3,
+            spacing: 16,
+          },
+        },
+      },
+      created(slider) {
+        slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+        keenSliderActive.innerText = slider.track.details.rel + 1
+        keenSliderCount.innerText = slider.slides.length
+      },
+      slideChanged(slider) {
+        slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
+
+        slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+        keenSliderActive.innerText = slider.track.details.rel + 1
+      },
+    },
+    []
+  )
+
+  const keenSliderPrevious = document.getElementById('keen-slider-previous')
+  const keenSliderNext = document.getElementById('keen-slider-next')
+
+  keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+  keenSliderNext.addEventListener('click', () => keenSlider.next())
+</script>
+
+  </body>
+</html>
