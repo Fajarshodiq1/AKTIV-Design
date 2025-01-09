@@ -1,249 +1,624 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/neue-plak-webfont/neue-plak.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/neue-plak-webfont/neue-plak.css" />
+  </head>
+  <body>
     <div class="h-[112px]">
-        <nav class="fixed top-0 flex items-center w-full justify-between p-8 bg-white z-30">
-            <a href="index.html">
-                <img src="assets/images/logos/Logo.svg" class="flex shrink-0" alt="logo">
-            </a>
-            <ul class="flex items-center justify-center gap-8">
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="view-booking.html">View My Booking</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Workshop</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Community</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Testimony</a>
-                </li>
-            </ul>
-            <a href="#" class="flex items-center rounded-full h-12 px-6 gap-[10px] w-fit shrink-0 bg-aktiv-green">
-                <span class="font-semibold text-white">Contact CS</span>
-                <img src="assets/images/icons/whatsapp.svg" class="w-6 h-6" alt="icon">
-            </a>
-        </nav>
+      <nav
+        class="fixed top-0 flex items-center w-full justify-between p-8 bg-white z-30"
+      >
+        <a href="index.html">
+          <img
+            src="assets/images/logos/logo.png"
+            class="md:flex shrink-0 h-10 hidden"
+            alt="logo"
+          />
+          <img
+            src="assets/images/logos/logo2.png"
+            class="flex md:hidden shrink-0 h-14"
+            alt="logo"
+          />
+        </a>
+        <ul class="hidden md:flex items-center justify-center gap-8">
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="view-booking.html">My Booking</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="workshop.html">Workshop</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="testimonial.html">Testimonial</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="flex items-center rounded-full h-12 px-6 gap-[10px] w-fit shrink-0 bg-aktiv-green"
+        >
+          <span class="font-semibold text-white">Contact CS</span>
+          <img
+            src="assets/images/icons/whatsapp.svg"
+            class="w-6 h-6 text-white"
+            alt="icon"
+          />
+        </a>
+      </nav>
+      <div
+        class="fixed bottom-0 left-0 w-full flex md:hidden bg-white justify-between px-4 py-4 border-t border-gray-200 z-30"
+      >
+        <!-- Home Icon -->
+        <a href="index.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <rect x="3" y="4" rx="2" />
+            <path
+              d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Home</span>
+        </a>
+
+        <!-- Booking Icon -->
+        <a href="view-booking.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M5 2H19C19.5523 2 20 2.44772 20 3V22.1433C20 22.4194 19.7761 22.6434 19.5 22.6434C19.4061 22.6434 19.314 22.6168 19.2344 22.5669L12 18.0313L4.76559 22.5669C4.53163 22.7136 4.22306 22.6429 4.07637 22.4089C4.02647 22.3293 4 22.2373 4 22.1433V3C4 2.44772 4.44772 2 5 2ZM18 4H6V19.4324L12 15.6707L18 19.4324V4ZM8 9H16V11H8V9Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">My Booking</span>
+        </a>
+
+        <!-- Workshop Icon -->
+        <a href="workshop.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM11 13V17H6V13H11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Workshop</span>
+        </a>
+
+        <a href="testimonial.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM12 11C14 11 15.6667 11.3333 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C8.33333 11.3333 10 11 12 11ZM8.5 7C9.70968 7 10.7187 7.85917 10.9501 9.00057H6.04989C6.28131 7.85917 7.29032 7 8.5 7ZM15.5 7C16.7097 7 17.7187 7.85917 17.9501 9.00057H13.0499C13.2813 7.85917 14.2903 7 15.5 7Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Testimonial</span>
+        </a>
+
+        <!-- Contact CS Icon -->
+        <a href="contact.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M4 2C3.44772 2 3 2.44772 3 3V5H5V4H19V20H5V19H3V21C3 21.5523 3.44772 22 4 22H20C20.5523 22 21 21.5523 21 21V3C21 2.44772 20.5523 2 20 2H4ZM9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16H9ZM12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10C14 11.1046 13.1046 12 12 12ZM6 9V7H2V9H6ZM6 11V13H2V11H6ZM6 17V15H2V17H6Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Contact</span>
+        </a>
+      </div>
     </div>
     <div id="background" class="relative w-full">
-        <div class="absolute w-full h-[300px] bg-[linear-gradient(0deg,#4EB6F5_0%,#5B8CE9_100%)] -z-10"></div>
+      <div
+        class="absolute w-full h-[300px] bg-[linear-gradient(0deg,#4EB6F5_0%,#5B8CE9_100%)] -z-10"
+      ></div>
     </div>
-    <section id="Content" class="w-full max-w-[1280px] mx-auto px-[52px] mt-16 mb-[100px]">
-        <div class="flex flex-col gap-16">
-            <div class="flex flex-col items-center gap-1">
-                <p class="font-bold text-[32px] leading-[48px] capitalize text-white">Booking Workshop</p>
-                <div class="flex items-center gap-2 text-white">
-                    <a class="last:font-semibold">Homepage</a>
-                    <span>></span>
-                    <a class="last:font-semibold">Workshop Details</a>
-                    <span>></span>
-                    <a class="last:font-semibold">Booking Workshop</a>
-                    <span>></span>
-                    <a class="last:font-semibold">Confirmation Payment</a>
-                </div>
-            </div>
-            <main class="flex gap-8">
-                <section id="Sidebar" class="group flex flex-col w-[420px] h-fit rounded-3xl p-8 bg-white">
-                    <div class="flex flex-col gap-4">
-                        <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Workshop Details</h2>
-                        <div class="thumbnail-container relative h-[240px] rounded-xl bg-[#D9D9D9] overflow-hidden">
-                            <img src="assets/images/thumbnails/thumbnail1.png" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="card-detail flex flex-col gap-2">
-                            <div class="flex items-center gap-3">
-                                <div class="flex items-center gap-1">
-                                    <img src="assets/images/icons/calendar-2.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <span class="font-medium text-aktiv-grey">Tue, 30 May 2024</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <img src="assets/images/icons/timer.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <span class="font-medium text-aktiv-grey">09:30 AM - Finish</span>
-                                </div>
-                            </div>
-                            <h3 class="font-Neue-Plak-bold text-xl">Mastering the Art of Public Speaking: Practical Tips and Powerful Techniques</h3>
-                        </div>
-                    </div>
-                    <div id="closes-section" class="accordion flex flex-col gap-8 transition-all duration-300 mt-8 group-has-[:checked]:mt-0 group-has-[:checked]:!h-0 overflow-hidden">
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Instructor Details</h2>
-                            <div class="flex items-center gap-3 rounded-xl border border-[#E6E7EB] p-4">
-                                <div class="flex w-16 h-16 shrink-0 rounded-full overflow-hidden bg-[#D9D9D9]">
-                                    <img src="assets/images/photos/photo3.png" class="w-full h-full object-cover" alt="photo">
-                                </div>
-                                <div class="flex flex-col gap-[2px] flex-1">
-                                    <p class="font-semibold text-lg leading-[27px]">Megamore S Qie</p>
-                                    <p class="font-medium text-aktiv-grey">Motivator Intructor</p>
-                                </div>
-                                <img src="assets/images/icons/verify.svg" class="flex w-[62px] h-[62px] shrink-0" alt="icon">
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">This workshop will teach</h2>
-                            <div class="flex flex-col gap-6">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/icons/tick-circle.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <p class="font-semibold text-lg leading-[27px]">Crafting Compelling Messages</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/icons/tick-circle.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <p class="font-semibold text-lg leading-[27px]">Enhancing Delivery Skills</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/icons/tick-circle.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <p class="font-semibold text-lg leading-[27px]">Engaging Your Audience</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/icons/tick-circle.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <p class="font-semibold text-lg leading-[27px]">Practical Exercises</p>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/images/icons/tick-circle.svg" class="w-6 h-6 flex shrink-0" alt="icon">
-                                    <p class="font-semibold text-lg leading-[27px]">Personal Development Plan</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Location Details</h2>
-                            <div class="flex flex-col gap-4 rounded-xl border border-[#E6E7EB] p-5 pb-[21px]">
-                                <div class="flex w-full h-[180px] rounded-xl overflow-hidden">
-                                    <img src="assets/images/thumbnails/location.png" class="w-full h-full object-cover" alt="location">
-                                </div>
-                                <div class="flex flex-col gap-3">
-                                    <p class="font-medium leading-[25.6px] text-aktiv-grey">101 Cendrawasih Road, Melati, Bandung Wetan, Bandung, West Java, 40116, Indonesia</p>
-                                    <a href="#" class="font-semibold text-aktiv-orange">View in Google Maps</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <label class="group mt-8">
-                        <input type="checkbox" class="hidden">
-                        <p class="before:content-['Show_Less'] group-has-[:checked]:before:content-['Show_More'] before:font-semibold before:text-lg before:leading-[27px] flex items-center justify-center gap-[6px]">
-                            <img src="assets/images/icons/arrow-up.svg" class="w-6 h-6 group-has-[:checked]:rotate-180 transition-all duration-300" alt="icon">
-                        </p>
-                    </label>
-                </section>
-                <form id="Form" action="success.html" class="flex flex-col w-[724px] gap-8">
-                    <div class="flex flex-col rounded-3xl p-8 gap-8 bg-white">
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Payments Details</h2>
-                            <div class="flex flex-col rounded-xl border border-[#E6E7EB] p-5 gap-4">
-                                <div class="flex items-center justify-between">
-                                    <p class="font-medium text-aktiv-grey">Quantity</p>
-                                    <p class="font-semibold text-lg leading-[27px] text-right">2</p>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <p class="font-medium text-aktiv-grey">Price</p>
-                                    <p class="font-semibold text-lg leading-[27px] text-right">Rp160.000</p>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <p class="font-medium text-aktiv-grey">PPN 11%</p>
-                                    <p class="font-semibold text-lg leading-[27px] text-right">Rp5.000</p>
-                                </div>
-                                <hr class="border-[#E6E7EB]">
-                                <div class="flex items-center justify-between">
-                                    <p class="font-medium text-aktiv-grey">Total Price</p>
-                                    <p class="font-semibold text-lg leading-[27px] text-right text-aktiv-red"> Rp319.680</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Your Bank Account</h2>
-                            <div class="flex flex-col gap-6">
-                                <label class="flex flex-col gap-4">
-                                    <p class="font-medium text-aktiv-grey">Select Bank Type</p>
-                                    <div class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden">
-                                        <img src="assets/images/icons/bank.svg" class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden" alt="icon">
-                                        <img src="assets/images/icons/bank-black.svg" class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex" alt="icon">
-                                        <input type="text" name="bankname" id="bankname" class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey" placeholder="What is the name of the bank you use?" required>
-                                    </div>
-                                </label>
-                                <label class="flex flex-col gap-4">
-                                    <p class="font-medium text-aktiv-grey">Full Name</p>
-                                    <div class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden">
-                                        <img src="assets/images/icons/profile-circle.svg" class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden" alt="icon">
-                                        <img src="assets/images/icons/profile-circle-black.svg" class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex" alt="icon">
-                                        <input type="text" name="fullname" id="fullname" class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey" placeholder="Under whose name is this bank account?" required>
-                                    </div>
-                                </label>
-                                <label class="flex flex-col gap-4">
-                                    <p class="font-medium text-aktiv-grey">Bank account number</p>
-                                    <div class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden">
-                                        <img src="assets/images/icons/card-edit.svg" class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden" alt="icon">
-                                        <img src="assets/images/icons/card-edit-black.svg" class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex" alt="icon">
-                                        <input type="text" name="banknumber" id="banknumber" class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey" placeholder="What is the bank account number?" required>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Transfer Details</h2>
-                            <div class="flex flex-col rounded-xl border border-[#E6E7EB]">
-                                <p class="text-center py-7 px-8 w-full font-semibold text-lg leading-[27px]">Transfer Bank</p>
-                                <hr class="border-[#E6E7EB]">
-                                <div class="flex flex-col py-5 px-8 gap-8">
-                                    <div class="flex items-center justify-between gap-8">
-                                        <div class="flex w-[78px] h-[53px] shrink-0 overflow-hidden">
-                                            <img src="assets/images/logos/bca.svg" class="object-contain" alt="bank logo">
-                                        </div>
-                                        <div class="flex flex-col gap-[2px] w-full">
-                                            <p class="font-medium text-aktiv-grey">BCA Activ Bank</p>
-                                            <p class="font-semibold text-lg leading-[27px]">1935 0009 1200</p>
-                                        </div>
-                                        <button type="button" class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange">Copy</button>
-                                    </div>
-                                    <div class="flex items-center justify-between gap-8">
-                                        <div class="flex w-[78px] h-[53px] shrink-0 overflow-hidden">
-                                            <img src="assets/images/logos/bni.svg" class="object-contain" alt="bank logo">
-                                        </div>
-                                        <div class="flex flex-col gap-[2px] w-full">
-                                            <p class="font-medium text-aktiv-grey">BNI Activ Bank</p>
-                                            <p class="font-semibold text-lg leading-[27px]">1200 1935 0009</p>
-                                        </div>
-                                        <button type="button" class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange">Copy</button>
-                                    </div>
-                                    <div class="flex items-center justify-between gap-8">
-                                        <div class="flex w-[78px] h-[53px] shrink-0 overflow-hidden">
-                                            <img src="assets/images/logos/bri.svg" class="object-contain" alt="bank logo">
-                                        </div>
-                                        <div class="flex flex-col gap-[2px] w-full">
-                                            <p class="font-medium text-aktiv-grey">BRI Activ Bank</p>
-                                            <p class="font-semibold text-lg leading-[27px]">0009 1200 1935</p>
-                                        </div>
-                                        <button type="button" class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">Upload Proof of payment</h2>
-                            <label class="flex flex-col gap-4">
-                                <div class="group flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden">
-                                    <div class="flex items-center w-full gap-2 text-aktiv-grey group-has-[:valid]:text-aktiv-black transition-all duration-300">
-                                        <img src="assets/images/icons/gallery.svg" class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden" alt="icon">
-                                        <img src="assets/images/icons/gallery-black.svg" class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex" alt="icon">
-                                        <p id="Upload-btn" class="font-medium text-lg leading-[27px] group-has-[:valid]:font-semibold">Upload file</p>   
-                                    </div>
-                                    <p class="font-semibold text-lg leading-[27px] text-aktiv-black text-nowrap">Browse file</p>        
-                                    <input type="file" name="proof" id="Proof" class="peer absolute -z-10 opacity-0 w-[10px]" required>
-                                </div>
-                            </label>
-                        </div>
-                        <button type="submit" class="w-full rounded-xl h-16 px-6 text-center bg-aktiv-orange font-semibold text-lg leading-[27px] text-white">Continue to Checkout</button>
-                    </div>
-                </form>
-            </main>
+    <section
+      id="Content"
+      class="w-full max-w-[1280px] mx-auto px-[52px] mt-16 mb-[100px]"
+    >
+      <div class="flex flex-col gap-16">
+        <div class="flex flex-col items-center gap-1">
+          <p class="font-bold text-[32px] leading-[48px] capitalize text-white">
+            Booking Workshop
+          </p>
+          <div class="flex items-center gap-2 text-white">
+            <a class="last:font-semibold">Homepage</a>
+            <span>></span>
+            <a class="last:font-semibold">Workshop Details</a>
+            <span>></span>
+            <a class="last:font-semibold">Booking Workshop</a>
+            <span>></span>
+            <a class="last:font-semibold">Confirmation Payment</a>
+          </div>
         </div>
+        <main class="flex gap-8">
+          <section
+            id="Sidebar"
+            class="group flex flex-col w-[420px] h-fit rounded-3xl p-8 bg-white"
+          >
+            <div class="flex flex-col gap-4">
+              <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                Workshop Details
+              </h2>
+              <div
+                class="thumbnail-container relative h-[240px] rounded-xl bg-[#D9D9D9] overflow-hidden"
+              >
+                <img
+                  src="assets/images/thumbnails/thumbnail1.png"
+                  class="w-full h-full object-cover"
+                  alt="thumbnail"
+                />
+              </div>
+              <div class="card-detail flex flex-col gap-2">
+                <div class="flex items-center gap-3">
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="assets/images/icons/calendar-2.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <span class="font-medium text-aktiv-grey"
+                      >Tue, 30 May 2024</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <img
+                      src="assets/images/icons/timer.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <span class="font-medium text-aktiv-grey"
+                      >09:30 AM - Finish</span
+                    >
+                  </div>
+                </div>
+                <h3 class="font-Neue-Plak-bold text-xl">
+                  Mastering the Art of Public Speaking: Practical Tips and
+                  Powerful Techniques
+                </h3>
+              </div>
+            </div>
+            <div
+              id="closes-section"
+              class="accordion flex flex-col gap-8 transition-all duration-300 mt-8 group-has-[:checked]:mt-0 group-has-[:checked]:!h-0 overflow-hidden"
+            >
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Instructor Details
+                </h2>
+                <div
+                  class="flex items-center gap-3 rounded-xl border border-[#E6E7EB] p-4"
+                >
+                  <div
+                    class="flex w-16 h-16 shrink-0 rounded-full overflow-hidden bg-[#D9D9D9]"
+                  >
+                    <img
+                      src="assets/images/photos/photo3.png"
+                      class="w-full h-full object-cover"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-[2px] flex-1">
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Megamore S Qie
+                    </p>
+                    <p class="font-medium text-aktiv-grey">
+                      Motivator Intructor
+                    </p>
+                  </div>
+                  <img
+                    src="assets/images/icons/verify.svg"
+                    class="flex w-[62px] h-[62px] shrink-0"
+                    alt="icon"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  This workshop will teach
+                </h2>
+                <div class="flex flex-col gap-6">
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="assets/images/icons/tick-circle.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Crafting Compelling Messages
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="assets/images/icons/tick-circle.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Enhancing Delivery Skills
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="assets/images/icons/tick-circle.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Engaging Your Audience
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="assets/images/icons/tick-circle.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Practical Exercises
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="assets/images/icons/tick-circle.svg"
+                      class="w-6 h-6 flex shrink-0"
+                      alt="icon"
+                    />
+                    <p class="font-semibold text-lg leading-[27px]">
+                      Personal Development Plan
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Location Details
+                </h2>
+                <div
+                  class="flex flex-col gap-4 rounded-xl border border-[#E6E7EB] p-5 pb-[21px]"
+                >
+                  <div class="flex w-full h-[180px] rounded-xl overflow-hidden">
+                    <img
+                      src="assets/images/thumbnails/location.png"
+                      class="w-full h-full object-cover"
+                      alt="location"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-3">
+                    <p class="font-medium leading-[25.6px] text-aktiv-grey">
+                      101 Cendrawasih Road, Melati, Bandung Wetan, Bandung, West
+                      Java, 40116, Indonesia
+                    </p>
+                    <a href="#" class="font-semibold text-aktiv-orange"
+                      >View in Google Maps</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="group mt-8">
+              <input type="checkbox" class="hidden" />
+              <p
+                class="before:content-['Show_Less'] group-has-[:checked]:before:content-['Show_More'] before:font-semibold before:text-lg before:leading-[27px] flex items-center justify-center gap-[6px]"
+              >
+                <img
+                  src="assets/images/icons/arrow-up.svg"
+                  class="w-6 h-6 group-has-[:checked]:rotate-180 transition-all duration-300"
+                  alt="icon"
+                />
+              </p>
+            </label>
+          </section>
+          <form
+            id="Form"
+            action="success.html"
+            class="flex flex-col w-[724px] gap-8"
+          >
+            <div class="flex flex-col rounded-3xl p-8 gap-8 bg-white">
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Payments Details
+                </h2>
+                <div
+                  class="flex flex-col rounded-xl border border-[#E6E7EB] p-5 gap-4"
+                >
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium text-aktiv-grey">Quantity</p>
+                    <p class="font-semibold text-lg leading-[27px] text-right">
+                      2
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium text-aktiv-grey">Price</p>
+                    <p class="font-semibold text-lg leading-[27px] text-right">
+                      Rp160.000
+                    </p>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium text-aktiv-grey">PPN 11%</p>
+                    <p class="font-semibold text-lg leading-[27px] text-right">
+                      Rp5.000
+                    </p>
+                  </div>
+                  <hr class="border-[#E6E7EB]" />
+                  <div class="flex items-center justify-between">
+                    <p class="font-medium text-aktiv-grey">Total Price</p>
+                    <p
+                      class="font-semibold text-lg leading-[27px] text-right text-aktiv-red"
+                    >
+                      Rp319.680
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Your Bank Account
+                </h2>
+                <div class="flex flex-col gap-6">
+                  <label class="flex flex-col gap-4">
+                    <p class="font-medium text-aktiv-grey">Select Bank Type</p>
+                    <div
+                      class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden"
+                    >
+                      <img
+                        src="assets/images/icons/bank.svg"
+                        class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden"
+                        alt="icon"
+                      />
+                      <img
+                        src="assets/images/icons/bank-black.svg"
+                        class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex"
+                        alt="icon"
+                      />
+                      <input
+                        type="text"
+                        name="bankname"
+                        id="bankname"
+                        class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey"
+                        placeholder="What is the name of the bank you use?"
+                        required
+                      />
+                    </div>
+                  </label>
+                  <label class="flex flex-col gap-4">
+                    <p class="font-medium text-aktiv-grey">Full Name</p>
+                    <div
+                      class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden"
+                    >
+                      <img
+                        src="assets/images/icons/profile-circle.svg"
+                        class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden"
+                        alt="icon"
+                      />
+                      <img
+                        src="assets/images/icons/profile-circle-black.svg"
+                        class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex"
+                        alt="icon"
+                      />
+                      <input
+                        type="text"
+                        name="fullname"
+                        id="fullname"
+                        class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey"
+                        placeholder="Under whose name is this bank account?"
+                        required
+                      />
+                    </div>
+                  </label>
+                  <label class="flex flex-col gap-4">
+                    <p class="font-medium text-aktiv-grey">
+                      Bank account number
+                    </p>
+                    <div
+                      class="group input-wrapper flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden"
+                    >
+                      <img
+                        src="assets/images/icons/card-edit.svg"
+                        class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden"
+                        alt="icon"
+                      />
+                      <img
+                        src="assets/images/icons/card-edit-black.svg"
+                        class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex"
+                        alt="icon"
+                      />
+                      <input
+                        type="text"
+                        name="banknumber"
+                        id="banknumber"
+                        class="appearance-none bg-transparent w-full outline-none text-lg leading-[27px] font-semibold placeholder:font-medium placeholder:text-aktiv-grey"
+                        placeholder="What is the bank account number?"
+                        required
+                      />
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Transfer Details
+                </h2>
+                <div class="flex flex-col rounded-xl border border-[#E6E7EB]">
+                  <p
+                    class="text-center py-7 px-8 w-full font-semibold text-lg leading-[27px]"
+                  >
+                    Transfer Bank
+                  </p>
+                  <hr class="border-[#E6E7EB]" />
+                  <div class="flex flex-col py-5 px-8 gap-8">
+                    <div class="flex items-center justify-between gap-8">
+                      <div
+                        class="flex w-[78px] h-[53px] shrink-0 overflow-hidden"
+                      >
+                        <img
+                          src="assets/images/logos/bca.svg"
+                          class="object-contain"
+                          alt="bank logo"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-[2px] w-full">
+                        <p class="font-medium text-aktiv-grey">
+                          BCA Activ Bank
+                        </p>
+                        <p class="font-semibold text-lg leading-[27px]">
+                          1935 0009 1200
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                    <div class="flex items-center justify-between gap-8">
+                      <div
+                        class="flex w-[78px] h-[53px] shrink-0 overflow-hidden"
+                      >
+                        <img
+                          src="assets/images/logos/bni.svg"
+                          class="object-contain"
+                          alt="bank logo"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-[2px] w-full">
+                        <p class="font-medium text-aktiv-grey">
+                          BNI Activ Bank
+                        </p>
+                        <p class="font-semibold text-lg leading-[27px]">
+                          1200 1935 0009
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                    <div class="flex items-center justify-between gap-8">
+                      <div
+                        class="flex w-[78px] h-[53px] shrink-0 overflow-hidden"
+                      >
+                        <img
+                          src="assets/images/logos/bri.svg"
+                          class="object-contain"
+                          alt="bank logo"
+                        />
+                      </div>
+                      <div class="flex flex-col gap-[2px] w-full">
+                        <p class="font-medium text-aktiv-grey">
+                          BRI Activ Bank
+                        </p>
+                        <p class="font-semibold text-lg leading-[27px]">
+                          0009 1200 1935
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        class="align-middle font-semibold text-lg leading-[27px] text-aktiv-orange"
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <h2 class="font-Neue-Plak-bold text-xl leading-[27.5px]">
+                  Upload Proof of payment
+                </h2>
+                <label class="flex flex-col gap-4">
+                  <div
+                    class="group flex items-center rounded-xl p-4 gap-2 bg-[#FBFBFB] overflow-hidden"
+                  >
+                    <div
+                      class="flex items-center w-full gap-2 text-aktiv-grey group-has-[:valid]:text-aktiv-black transition-all duration-300"
+                    >
+                      <img
+                        src="assets/images/icons/gallery.svg"
+                        class="w-6 h-6 flex shrink-0 group-focus-within:hidden group-has-[:valid]:hidden"
+                        alt="icon"
+                      />
+                      <img
+                        src="assets/images/icons/gallery-black.svg"
+                        class="w-6 h-6 shrink-0 hidden group-focus-within:flex group-has-[:valid]:flex"
+                        alt="icon"
+                      />
+                      <p
+                        id="Upload-btn"
+                        class="font-medium text-lg leading-[27px] group-has-[:valid]:font-semibold"
+                      >
+                        Upload file
+                      </p>
+                    </div>
+                    <p
+                      class="font-semibold text-lg leading-[27px] text-aktiv-black text-nowrap"
+                    >
+                      Browse file
+                    </p>
+                    <input
+                      type="file"
+                      name="proof"
+                      id="Proof"
+                      class="peer absolute -z-10 opacity-0 w-[10px]"
+                      required
+                    />
+                  </div>
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="w-full rounded-xl h-16 px-6 text-center bg-aktiv-orange font-semibold text-lg leading-[27px] text-white"
+              >
+                Continue to Checkout
+              </button>
+            </div>
+          </form>
+        </main>
+      </div>
     </section>
 
     <script src="js/accodion.js"></script>
     <script src="js/upload-file.js"></script>
-</body>
+  </body>
 </html>

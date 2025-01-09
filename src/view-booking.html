@@ -1,156 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/neue-plak-webfont/neue-plak.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/neue-plak-webfont/neue-plak.css" />
+  </head>
+  <body>
     <div class="h-[112px]">
-        <nav class="fixed top-0 flex items-center w-full justify-between p-8 bg-white z-30">
-            <a href="index.html">
-                <img src="assets/images/logos/Logo.svg" class="flex shrink-0" alt="logo">
-            </a>
-            <ul class="flex items-center justify-center gap-8">
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300 font-semibold text-aktiv-orange">
-                    <a href="view-booking.html">View My Booking</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Workshop</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Community</a>
-                </li>
-                <li class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                    <a href="">Testimony</a>
-                </li>
-            </ul>
-            <a href="#" class="flex items-center rounded-full h-12 px-6 gap-[10px] w-fit shrink-0 bg-aktiv-green">
-                <span class="font-semibold text-white">Contact CS</span>
-                <img src="assets/images/icons/whatsapp.svg" class="w-6 h-6" alt="icon">
-            </a>
-        </nav>
+      <nav
+        class="fixed top-0 flex items-center w-full justify-between p-8 bg-white z-30"
+      >
+        <a href="index.html">
+          <img
+            src="assets/images/logos/logo.png"
+            class="md:flex shrink-0 h-10 hidden"
+            alt="logo"
+          />
+          <img
+            src="assets/images/logos/logo2.png"
+            class="flex md:hidden shrink-0 h-14"
+            alt="logo"
+          />
+        </a>
+        <ul class="hidden md:flex items-center justify-center gap-8">
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="index.html">Home</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="view-booking.html">My Booking</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="workshop.html">Workshop</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="testimonial.html">Testimonial</a>
+          </li>
+          <li
+            class="font-medium text-aktiv-grey hover:font-semibold hover:text-aktiv-orange transition-all duration-300"
+          >
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="flex items-center rounded-full h-12 px-6 gap-[10px] w-fit shrink-0 bg-aktiv-green"
+        >
+          <span class="font-semibold text-white">Contact CS</span>
+          <img
+            src="assets/images/icons/whatsapp.svg"
+            class="w-6 h-6 text-white"
+            alt="icon"
+          />
+        </a>
+      </nav>
+      <div
+        class="fixed bottom-0 left-0 w-full flex md:hidden bg-white justify-between px-4 py-4 border-t border-gray-200 z-30"
+      >
+        <!-- Home Icon -->
+        <a href="index.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <rect x="3" y="4" rx="2" />
+            <path
+              d="M19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20C20 20.5523 19.5523 21 19 21ZM6 19H18V9.15745L12 3.7029L6 9.15745V19ZM8 15H16V17H8V15Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Home</span>
+        </a>
+
+        <!-- Booking Icon -->
+        <a href="view-booking.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M5 2H19C19.5523 2 20 2.44772 20 3V22.1433C20 22.4194 19.7761 22.6434 19.5 22.6434C19.4061 22.6434 19.314 22.6168 19.2344 22.5669L12 18.0313L4.76559 22.5669C4.53163 22.7136 4.22306 22.6429 4.07637 22.4089C4.02647 22.3293 4 22.2373 4 22.1433V3C4 2.44772 4.44772 2 5 2ZM18 4H6V19.4324L12 15.6707L18 19.4324V4ZM8 9H16V11H8V9Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">My Booking</span>
+        </a>
+
+        <!-- Workshop Icon -->
+        <a href="workshop.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM11 13V17H6V13H11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Workshop</span>
+        </a>
+
+        <a href="testimonial.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM12 11C14 11 15.6667 11.3333 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C8.33333 11.3333 10 11 12 11ZM8.5 7C9.70968 7 10.7187 7.85917 10.9501 9.00057H6.04989C6.28131 7.85917 7.29032 7 8.5 7ZM15.5 7C16.7097 7 17.7187 7.85917 17.9501 9.00057H13.0499C13.2813 7.85917 14.2903 7 15.5 7Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Testimonial</span>
+        </a>
+
+        <!-- Contact CS Icon -->
+        <a href="contact.html" class="flex flex-col items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-7 text-gray-500"
+          >
+            <path
+              d="M4 2C3.44772 2 3 2.44772 3 3V5H5V4H19V20H5V19H3V21C3 21.5523 3.44772 22 4 22H20C20.5523 22 21 21.5523 21 21V3C21 2.44772 20.5523 2 20 2H4ZM9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16H9ZM12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8C13.1046 8 14 8.89543 14 10C14 11.1046 13.1046 12 12 12ZM6 9V7H2V9H6ZM6 11V13H2V11H6ZM6 17V15H2V17H6Z"
+            ></path>
+          </svg>
+          <span class="text-sm font-medium text-aktiv-grey">Contact</span>
+        </a>
+      </div>
     </div>
     <div id="background" class="relative w-full">
-        <div class="absolute w-full h-[356px] bg-[linear-gradient(0deg,#4EB6F5_0%,#5B8CE9_100%)] -z-10"></div>
+      <div
+        class="absolute w-full h-[356px] bg-[linear-gradient(0deg,#4EB6F5_0%,#5B8CE9_100%)] -z-10"
+      ></div>
     </div>
-    <section id="Header" class="w-full max-w-[1280px] mx-auto px-[52px] my-16">
-        <div class="flex flex-col gap-16">
-            <div class="flex flex-col items-center gap-1">
-                <p class="font-bold text-[32px] leading-[48px] capitalize text-white">View Your Booking</p>
-                <p class="text-white">Enter the booking code sent to your email to check the status of your booking.</p>
-            </div>
-            <main class="flex gap-8">
-                <form action="e-ticket.html" class="flex items-center justify-between w-full rounded-full p-3 pl-8 gap-6 bg-white overflow-hidden">
-                    <label class="flex items-center gap-2 w-full">
-                        <img src="assets/images/icons/receipt-black.svg" class="w-8 h-8 flex shrink-0" alt="icon">
-                        <input type="text" name="bookingid" id="bookingid" class="appearance-none outline-none font-semibold text-lg leading-[27px] placeholder:text-aktiv-black" placeholder="Booking ID">
-                    </label>
-                    <div class="h-12 border-[1.5px] border-[#E6E7EB]"></div>
-                    <label class="flex items-center gap-2 w-full">
-                        <img src="assets/images/icons/call-black.svg" class="w-8 h-8 flex shrink-0" alt="icon">
-                        <input type="tel" name="phone" id="phone" class="appearance-none outline-none font-semibold text-lg leading-[27px] placeholder:text-aktiv-black" placeholder="Phone No">
-                    </label>
-                    <button type="submit" class="flex items-center shrink-0 gap-2 rounded-full py-4 px-8 bg-aktiv-orange">
-                        <img src="assets/images/icons/search-normal.svg" class="w-8 h-8 flex shrink-0" alt="icon">
-                        <span class="font-semibold text-lg leading-[27px] text-white text-nowrap">View My Booking</span>
-                    </button>
-                </form>
-            </main>
+    <section
+      id="Header"
+      class="w-full max-w-[1280px] mx-auto px-5 lg:px-[52px] my-16"
+    >
+      <div class="flex flex-col gap-16">
+        <div class="flex flex-col items-center gap-1">
+          <p class="font-bold text-[32px] leading-[48px] capitalize text-white">
+            View Your Booking
+          </p>
+          <p class="text-white">
+            Enter the booking code sent to your email to check the status of
+            your booking.
+          </p>
         </div>
+        <main class="flex gap-8">
+          <form
+            action="e-ticket.html"
+            method="POST"
+            class="flex flex-col sm:flex-row items-center justify-between w-full rounded-3xl lg:rounded-full p-10 lg:p-3 pl-8 gap-6 bg-white overflow-hidden"
+          >
+            <label class="flex items-center gap-2 w-full">
+              <img
+                src="assets/images/icons/receipt-black.svg"
+                class="w-8 h-8 flex shrink-0"
+                alt="icon"
+              />
+              <input
+                type="text"
+                name="booking_trx_id"
+                id="bookingid"
+                class="w-full appearance-none outline-none font-semibold text-base sm:text-lg leading-[24px] sm:leading-[27px] placeholder:text-aktiv-black"
+                placeholder="Booking ID"
+              />
+            </label>
+            <div
+              class="hidden sm:block h-12 border-[1.5px] border-[#E6E7EB]"
+            ></div>
+            <label class="flex items-center gap-2 w-full">
+              <img
+                src="assets/images/icons/call-black.svg"
+                class="w-8 h-8 flex shrink-0"
+                alt="icon"
+              />
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                class="w-full appearance-none outline-none font-semibold text-base sm:text-lg leading-[24px] sm:leading-[27px] placeholder:text-aktiv-black"
+                placeholder="Phone No"
+              />
+            </label>
+            <button
+              type="submit"
+              class="flex items-center shrink-0 gap-2 rounded-full py-4 px-8 bg-aktiv-orange w-full sm:w-auto justify-center"
+            >
+              <img
+                src="assets/images/icons/search-normal.svg"
+                class="w-8 h-8 flex shrink-0"
+                alt="icon"
+              />
+              <span
+                class="font-semibold text-base sm:text-lg leading-[24px] sm:leading-[27px] text-white text-nowrap"
+                >View My Booking</span
+              >
+            </button>
+          </form>
+        </main>
+      </div>
     </section>
     <section id="Benefits" class="py-[100px] bg-white mb-8">
-        <div class="flex flex-col gap-8 w-full max-w-[1280px] px-[52px] mx-auto">
-            <div class="flex items-center justify-center">
-                <h2 class="font-Neue-Plak-bold text-[32px] leading-[44.54px] capitalize text-center">Get acquainted with us! 🙌🏻</h2>
-            </div>
-            <div class="grid grid-cols-3 gap-6">
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/In-Depth Learning from Experts Instructor.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">In-Depth Learning from Experts Instructor</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">We feature instructors with strong field-specific expertise.</p>
-                </div>
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/Tangible Results.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">Tangible Results</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">Our students are highly engaged and supportive of our community.</p>
-                </div>
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/Supportive Learning Environment.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">Supportive Learning Environment</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">We feature instructors with strong field-specific expertise.</p>
-                </div>
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/community support.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">Community Support</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">We feature instructors with strong field-specific expertise.</p>
-                </div>
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/Networking Opportunities With Other.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">Networking Opportunities With Other</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">We feature instructors with strong field-specific expertise.</p>
-                </div>
-                <div class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/icons/Learning Flexibility.png" class="flex w-[56px] h-[56px] shrink-0" alt="icon">
-                        <h3 class="font-semibold text-lg leading-[27px]">Learning Flexibility</h3>
-                    </div>
-                    <p class="font-medium leading-[25.6px] text-aktiv-grey">We offer a variety of workshops that you can learn from every day.</p>
-                </div>
-            </div>
-            <a href="#" class="flex items-center rounded-full py-4 px-6 h-[56px] gap-3 bg-aktiv-orange mx-auto">
-                <span class="font-semibold text-white">Learn More</span>
-                <span class="w-6 h-6 rounded-full bg-white text-center align-middle text-aktiv-orange font-bold">></span>
-            </a>
+      <div class="flex flex-col gap-8 w-full max-w-[1280px] px-[52px] mx-auto">
+        <div class="flex items-center justify-center">
+          <h2
+            class="font-Neue-Plak-bold text-[32px] leading-[44.54px] capitalize text-center"
+          >
+            Get acquainted with us! 🙌🏻
+          </h2>
         </div>
+        <div class="grid grid-rows-1 lg:grid-cols-3 gap-6">
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/In-Depth Learning from Experts Instructor.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                In-Depth Learning from Experts Instructor
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              We feature instructors with strong field-specific expertise.
+            </p>
+          </div>
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/Tangible Results.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                Tangible Results
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              Our students are highly engaged and supportive of our community.
+            </p>
+          </div>
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/Supportive Learning Environment.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                Supportive Learning Environment
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              We feature instructors with strong field-specific expertise.
+            </p>
+          </div>
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/community support.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                Community Support
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              We feature instructors with strong field-specific expertise.
+            </p>
+          </div>
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/Networking Opportunities With Other.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                Networking Opportunities With Other
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              We feature instructors with strong field-specific expertise.
+            </p>
+          </div>
+          <div
+            class="flex flex-col h-full justify-between rounded-3xl border border-[#E6E7EB] p-6 gap-3 bg-white"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/images/icons/Learning Flexibility.png"
+                class="flex w-[56px] h-[56px] shrink-0"
+                alt="icon"
+              />
+              <h3 class="font-semibold text-lg leading-[27px]">
+                Learning Flexibility
+              </h3>
+            </div>
+            <p class="font-medium leading-[25.6px] text-aktiv-grey">
+              We offer a variety of workshops that you can learn from every day.
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="flex items-center rounded-full py-4 px-6 h-[56px] gap-3 bg-aktiv-orange mx-auto"
+        >
+          <span class="font-semibold text-white">Learn More</span>
+          <span
+            class="w-6 h-6 rounded-full bg-white text-center align-middle text-aktiv-orange font-bold"
+            >></span
+          >
+        </a>
+      </div>
     </section>
-    <footer class="w-full p-[52px] bg-white">
-        <div class="flex flex-col w-full max-w-[1176px] mx-auto gap-8">
-            <div class="flex flex-col items-center gap-4">
-                <img src="assets/images/logos/Logo-blue.svg" class="h-10" alt="logo">
-                <p class="font-medium text-aktiv-grey">Ipsum is a company engaged in offline education.</p>
-            </div>
-            <hr class="border-[#E6E7EB]">
-            <div class="grid grid-cols-3 items-center">
-                <p class="flex font-medium text-aktiv-grey">© 2024 Workflow Copyright</p>
-                <ul class="flex items-center justify-center gap-6">
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">Workshop</a>
-                    </li>
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">Community</a>
-                    </li>
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">Testimony</a>
-                    </li>
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">About Us</a>
-                    </li>
-                </ul>
-                <ul class="flex items-center justify-end gap-6">
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">Instagram</a>
-                    </li>
-                    <li class="font-medium text-aktiv-grey text-nowrap hover:font-semibold hover:text-aktiv-orange transition-all duration-300">
-                        <a href="#">Twitter</a>
-                    </li>
-                </ul>
-            </div>
+    <footer class="w-full p-[52px] bg-white hidden lg:block">
+      <div class="flex flex-col w-full max-w-[1176px] mx-auto gap-8">
+        <div class="flex flex-col items-center gap-4">
+          <img src="assets/images/logos/logo.png" class="h-10" alt="logo" />
+          <p class="font-medium text-aktiv-grey">
+            Ipsum is a company engaged in offline education.
+          </p>
         </div>
+      </div>
     </footer>
 
     <script src="js/accodion.js"></script>
-</body>
+  </body>
 </html>
